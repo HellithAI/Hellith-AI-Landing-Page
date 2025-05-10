@@ -1,0 +1,93 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #EEEEEE;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    background-color: #0F0F0F;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #B21807;
+}
+
+header .tagline {
+    font-size: 1.5rem;
+    color: #26A69A;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    background-color: #1A1A1A;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #B21807;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #EEEEEE;
+}
+
+/* Connect Section */
+.connect {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0F0F0F;
+}
+
+.connect p {
+    font-size: 1.2rem;
+    color: #EEEEEE;
+    margin-bottom: 20px;
+}
+
+.connect .linkedin-btn {
+    font-size: 1rem;
+    background-color: #26A69A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.connect .linkedin-btn:hover {
+    background-color: #1A8266;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #EEEEEE;
+    font-size: 0.9rem;
+}
