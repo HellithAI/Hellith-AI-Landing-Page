@@ -26,54 +26,48 @@
             text-align: center;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
         header {
             width: 100%;
             background-color: #1A1A1A;
-            padding: 15px 20px;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             color: #fff;
         }
 
         nav {
-            display: flex;
-            gap: 15px;
+            margin-top: 10px;
         }
 
         nav a {
+            margin: 0 15px;
             font-size: 16px;
             color: #EAEAEA;
-            font-weight: 500;
+            text-transform: uppercase;
         }
 
         .hero {
-            padding: 60px 20px;
+            padding: 100px 20px 60px;
             background-color: #1B1B1B;
-            text-align: center;
+            color: #fff;
         }
 
         .hero h1 {
             font-size: 36px;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .cta-button {
@@ -81,26 +75,39 @@
             background-color: #26A69A;
             color: #fff;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
-        .why-choose {
+        .cta-button:hover {
+            background-color: #00796B;
+        }
+
+        .section {
             padding: 60px 20px;
             background-color: #1A1A1A;
+            margin-bottom: 30px;
         }
 
-        .why-choose h2 {
+        .section h2 {
             font-size: 32px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             color: #26A69A;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #B0BEC5;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .grid-item {
+        .card {
             background-color: #2C2C2C;
             padding: 20px;
             border-radius: 10px;
@@ -108,47 +115,44 @@
             transition: transform 0.3s;
         }
 
-        .grid-item:hover {
-            transform: translateY(-5px);
+        .card:hover {
+            transform: translateY(-10px);
         }
 
-        .grid-item h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
         }
 
-        .grid-item p {
+        .card p {
             font-size: 14px;
             color: #B0BEC5;
         }
 
         footer {
             background-color: #1A1A1A;
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
-        }
-
-        footer p {
             font-size: 14px;
         }
 
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
             .hero h1 {
                 font-size: 28px;
             }
 
-            .hero p, .cta-button {
+            .hero p {
                 font-size: 16px;
             }
 
-            .why-choose h2 {
-                font-size: 28px;
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
             }
         }
     </style>
@@ -159,39 +163,41 @@
         <div class="logo">Hellith AI</div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#why-choose">Why Us?</a>
+            <a href="#overview">Overview</a>
+            <a href="#why-us">Why Us</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section class="hero" id="home">
         <h1>Privacy-First AI Solutions</h1>
-        <p>Empowering businesses with self-hosted, modular AI systems without compromising data privacy.</p>
+        <p>Empowering businesses with self-hosted, modular AI systems that prioritize data security.</p>
         <a href="#contact" class="cta-button">Get in Touch</a>
     </section>
 
-    <section class="why-choose" id="why-choose">
+    <section class="section" id="overview">
+        <h2>Overview</h2>
+        <p>We develop AI tools designed to keep your data secure within your infrastructure. Our systems are modular, adaptable, and privacy-focused.</p>
+    </section>
+
+    <section class="section" id="why-us">
         <h2>Why Choose Hellith AI?</h2>
         <div class="grid-container">
-            <div class="grid-item">
-                <h3>Self-Hosted AI Systems</h3>
-                <p>Deploy AI tools within your infrastructure to maintain complete data control.</p>
+            <div class="card">
+                <h3>Privacy-First Approach</h3>
+                <p>Data remains under your control, ensuring complete privacy and security.</p>
             </div>
-            <div class="grid-item">
-                <h3>Transparency-Focused AI</h3>
-                <p>Explainable AI models that prioritize clarity, providing actionable insights.</p>
+            <div class="card">
+                <h3>Modular AI Systems</h3>
+                <p>Customizable and adaptable AI solutions tailored to your specific needs.</p>
             </div>
-            <div class="grid-item">
-                <h3>Modular Architecture</h3>
-                <p>Customizable AI solutions tailored to specific business needs with scalability.</p>
+            <div class="card">
+                <h3>Transparency & Explainability</h3>
+                <p>Actionable insights delivered through interpretable models.</p>
             </div>
-            <div class="grid-item">
-                <h3>Adaptable Systems</h3>
-                <p>AI that evolves with your business, continuously delivering value.</p>
-            </div>
-            <div class="grid-item">
-                <h3>Human-Centric Design</h3>
-                <p>Intuitive, user-focused interfaces for enhanced usability and efficiency.</p>
+            <div class="card">
+                <h3>Scalable Architecture</h3>
+                <p>Solutions that grow with your business, from startups to enterprises.</p>
             </div>
         </div>
     </section>
