@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellith AI - Privacy-First AI Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -15,221 +14,153 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #EEEEEE; /* Light Gray text */
-            background-color: #0F0F0F; /* Dark Background */
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
+            background-color: #0F0F0F;
+            color: #EEEEEE;
+            overflow-x: hidden;
         }
 
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
+            padding: 20px;
             background-color: #0F0F0F;
-            padding: 20px 0;
-            z-index: 100;
-        }
-
-        header .logo {
-            color: #EEEEEE; /* Light Gray for logo */
-            text-align: center;
-            font-size: 24px;
-            font-weight: 500;
-        }
-
-        header nav {
             display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
         }
 
-        header nav a {
-            margin: 0 20px;
-            color: #EEEEEE; /* Light Gray for nav items */
-            font-size: 18px;
-            font-weight: 400;
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            color: #B21807;
+            display: flex;
+            align-items: center;
         }
 
-        /* Hero Section */
+        .logo span {
+            font-size: 28px;
+            margin-right: 8px;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700; }
+            to { text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700; }
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #EEEEEE;
+            font-size: 16px;
+        }
+
         .hero {
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #0F0F0F;
-            color: white;
             text-align: center;
-            padding: 0 20px;
+            background-color: #0F0F0F;
         }
 
-        .hero h1 {
+        .hero-content h1 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
             font-size: 48px;
+            color: #26A69A;
             margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size: 20px;
+        .hero-content p {
+            font-size: 18px;
             margin-bottom: 30px;
         }
 
         .cta-button {
+            background-color: #B21807;
+            color: #EEEEEE;
             padding: 15px 30px;
-            background-color: #26A69A; /* Teal for buttons */
-            color: white;
+            border: none;
             border-radius: 5px;
-            font-size: 18px;
-            font-weight: 500;
+            cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #00796B;
+            background-color: #8F1505;
         }
 
-        /* Services Section */
         .services {
-            background-color: #0F0F0F;
-            padding: 50px 20px;
+            padding: 80px 20px;
+            background-color: #1A1A1A;
             text-align: center;
         }
 
         .services h2 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
             font-size: 36px;
-            margin-bottom: 30px;
-            color: #EEEEEE; /* Light Gray for heading */
+            color: #26A69A;
+            margin-bottom: 40px;
         }
 
-        .services .service-card {
+        .service-card {
             display: inline-block;
             width: 30%;
-            margin: 20px 10px;
-            background-color: #1A237E;
+            background-color: #0F0F0F;
+            margin: 10px;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s;
         }
 
-        .services .service-card:hover {
-            transform: translateY(-10px);
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
-        .services .service-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #B21807; /* Accent Red for card title */
-        }
-
-        .services .service-card p {
-            font-size: 16px;
-            color: #EEEEEE; /* Light Gray for text */
-        }
-
-        /* LinkedIn CTA Section */
-        .cta-section {
-            background-color: #26A69A; /* Teal background for CTA */
-            padding: 50px 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .cta-button-linkedin {
-            padding: 15px 30px;
-            background-color: #0F0F0F;
-            color: white;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button-linkedin:hover {
-            background-color: #B21807; /* Accent Red hover effect */
-        }
-
-        /* Footer Section */
         footer {
-            background-color: #0F0F0F; /* Dark Footer */
-            color: white;
-            padding: 30px 20px;
+            background-color: #0F0F0F;
+            padding: 40px;
             text-align: center;
-        }
-
-        footer p {
-            font-size: 16px;
+            color: #888;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
-        <div class="logo">Hellith AI</div>
-        <nav>
+        <div class="logo"><span>⚡</span> Hellith AI</div>
+        <nav class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
-            <a href="#cta">Contact</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div>
-            <h1>Empowering Businesses with Privacy-First AI Solutions</h1>
-            <p>We help organizations harness the power of AI while ensuring that their sensitive data remains safe and within their control.</p>
-            <a href="#cta" class="cta-button">Connect with Us</a>
+        <div class="hero-content">
+            <h1>Empowering Privacy-First AI Solutions</h1>
+            <p>Transform your business with modular, self-hosted AI that keeps your data private and secure.</p>
+            <button class="cta-button">Get Started</button>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
-        <h2>Our Services</h2>
+        <h2>Our Core Solutions</h2>
         <div class="service-card">
-            <h3>Self-hosted AI Systems</h3>
-            <p>Powerful AI systems that run within your infrastructure, giving you full control over your data.</p>
+            <h3>Self-Hosted AI Systems</h3>
+            <p>Secure, modular AI deployed within your infrastructure for maximum control.</p>
         </div>
         <div class="service-card">
             <h3>Data Privacy Tools</h3>
-            <p>Ensure your business data is protected while enjoying the benefits of modern AI technologies.</p>
+            <p>Protect your business data with powerful AI tools tailored for privacy.</p>
         </div>
         <div class="service-card">
-            <h3>AI-Integrated Products</h3>
-            <p>AI-driven solutions that help businesses streamline operations and solve real-world challenges.</p>
+            <h3>AI-Integrated Solutions</h3>
+            <p>Streamline operations with AI-driven automation and analytics.</p>
         </div>
     </section>
 
-    <!-- LinkedIn CTA Section -->
-    <section class="cta-section" id="cta">
-        <h2>Let's Connect</h2>
-        <p>Interested in collaborating or learning more? Connect with us directly via LinkedIn.</p>
-        <a href="https://www.linkedin.com/in/ishaan-bagul/" class="cta-button-linkedin">Connect on LinkedIn</a>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Hellith AI. All rights reserved.</p>
     </footer>
