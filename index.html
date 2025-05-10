@@ -17,141 +17,160 @@
             background-color: #0F0F0F;
             color: #EEEEEE;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 50px 0;
         }
 
         header {
-            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px 0;
-            background-color: #0F0F0F;
-            text-align: center;
         }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 32px;
+            font-size: 1.8rem;
             font-weight: 600;
-            color: #26A69A;
+        }
+
+        .nav-links a {
+            margin: 0 15px;
+            color: #EEEEEE;
+            text-decoration: none;
+            font-weight: 600;
         }
 
         .hero {
             display: flex;
-            justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            justify-content: center;
+            flex-direction: column;
+            height: 80vh;
             background-color: #0F0F0F;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
         }
 
         .hero h1 {
+            font-size: 3rem;
             font-family: 'Montserrat', sans-serif;
-            font-size: 48px;
             margin-bottom: 20px;
+        }
+
+        .hero .text-transition {
+            font-size: 1.2rem;
             color: #26A69A;
+            animation: changeText 10s infinite;
         }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
+        @keyframes changeText {
+            0% { content: "Building Meaningful AI"; }
+            25% { content: "Protecting Your Data"; }
+            50% { content: "Empowering Businesses"; }
+            75% { content: "Seamless Integration"; }
+            100% { content: "Scalable Solutions"; }
         }
 
-        .hero .cta-button {
-            background-color: #26A69A;
-            color: #0F0F0F;
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: 600;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        .services {
-            background-color: #0F0F0F;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            font-family: 'Montserrat', sans-serif;
-            color: #26A69A;
-        }
-
-        .service-card {
+        .grid-item {
             background-color: #1A1A1A;
-            margin: 20px auto;
             padding: 30px;
-            max-width: 300px;
-            border-radius: 10px;
+            border-radius: 12px;
+            transition: transform 0.3s, background-color 0.3s;
         }
 
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
+        .grid-item:hover {
+            background-color: #262626;
+            transform: translateY(-5px);
         }
 
         .cta-section {
-            background-color: #1A1A1A;
-            padding: 60px 20px;
+            background-color: #262626;
+            padding: 50px 0;
             text-align: center;
         }
 
         .cta-section a {
             background-color: #26A69A;
-            padding: 12px 24px;
             color: #0F0F0F;
+            padding: 15px 30px;
             border-radius: 5px;
             font-weight: 600;
+            text-decoration: none;
         }
 
         footer {
-            background-color: #0F0F0F;
-            padding: 40px;
+            padding: 30px 0;
             text-align: center;
         }
 
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Hellith AI</div>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
+    <div class="container">
+        <header>
+            <div class="logo">Hellith AI</div>
+            <nav class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
             <h1>Privacy-First AI Solutions</h1>
-            <p>Building Meaningful AI. Protecting Your Data.</p>
-            <a href="#cta" class="cta-button">Learn More</a>
-        </div>
-    </section>
+            <div class="text-transition">Building Meaningful AI</div>
+        </section>
 
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-card">
-            <h3>Self-Hosted AI Systems</h3>
-            <p>Modular AI tools designed for deployment within your infrastructure, ensuring data privacy and control.</p>
-        </div>
-        <div class="service-card">
-            <h3>AI-Integrated Solutions</h3>
-            <p>Custom AI products for workflow automation, document processing, and predictive analytics.</p>
-        </div>
-        <div class="service-card">
-            <h3>Transparency-Focused AI</h3>
-            <p>Explainable AI models providing actionable insights without the hype, focusing on real-world impact.</p>
-        </div>
-    </section>
+        <section class="grid" id="overview">
+            <div class="grid-item">
+                <h2>Overview</h2>
+                <p>Hellith AI is focused on developing self-hosted, modular AI systems that prioritize data privacy without compromising capabilities.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Vision</h2>
+                <p>Redefining AI integration through privacy-first, adaptable, and impactful AI solutions.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Mission</h2>
+                <p>Creating AI tools that respect data privacy, remain modular, and effectively solve business challenges.</p>
+            </div>
+        </section>
 
-    <section class="cta-section" id="cta">
-        <h2>Connect With Us</h2>
-        <p>Interested in collaborating or learning more? Connect with us directly via LinkedIn.</p>
-        <a href="https://www.linkedin.com/in/ishaanbagul" target="_blank">Connect on LinkedIn</a>
-    </section>
+        <section class="grid" id="services">
+            <div class="grid-item">
+                <h2>Self-Hosted AI Systems</h2>
+                <p>Deploy AI within your infrastructure with no external data transfer, ensuring data security and control.</p>
+            </div>
+            <div class="grid-item">
+                <h2>AI-Integrated Solutions</h2>
+                <p>AI-driven products for workflow automation, predictive analytics, and document processing.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Transparency-Focused AI</h2>
+                <p>Explainable AI that delivers clear insights, emphasizing real-world impact and actionable data.</p>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 Hellith AI. All rights reserved.</p>
-    </footer>
+        <section class="cta-section" id="contact">
+            <h2>Connect with Us</h2>
+            <a href="https://www.linkedin.com/in/ishaanbagul">Connect on LinkedIn</a>
+        </section>
+
+        <footer>
+            &copy; 2025 Hellith AI. All rights reserved.
+        </footer>
+    </div>
+
 </body>
 </html>
