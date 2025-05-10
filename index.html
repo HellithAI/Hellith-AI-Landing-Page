@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Hellith AI - Privacy-First AI Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
@@ -19,9 +18,12 @@
             color: #EAEAEA;
             line-height: 1.6;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
         }
 
         a {
@@ -29,15 +31,11 @@
             color: inherit;
         }
 
-        /* Header */
         header {
             width: 100%;
             background-color: #1A1A1A;
-            padding: 20px;
+            padding: 15px 20px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -47,169 +45,160 @@
             font-size: 24px;
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            color: #26A69A;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
         }
 
         nav a {
-            margin-left: 20px;
             font-size: 16px;
             color: #EAEAEA;
             font-weight: 500;
         }
 
-        /* Hero Section */
         .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 100px 20px;
+            padding: 60px 20px;
             background-color: #1B1B1B;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 36px;
             margin-bottom: 20px;
             font-family: 'Playfair Display', serif;
-            color: #26A69A;
         }
 
         .hero p {
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .cta-button {
-            padding: 12px 30px;
+            padding: 12px 24px;
             background-color: #26A69A;
-            color: #FFF;
+            color: #fff;
             border-radius: 5px;
-            font-weight: 500;
         }
 
-        /* Section Styles */
-        .section {
-            width: 100%;
-            max-width: 1200px;
+        .why-choose {
             padding: 60px 20px;
             background-color: #1A1A1A;
-            margin-bottom: 40px;
-            text-align: center;
         }
 
-        .section h2 {
+        .why-choose h2 {
             font-size: 32px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             color: #26A69A;
-        }
-
-        .section p {
-            font-size: 16px;
-            color: #B0BEC5;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
-            justify-items: center;
         }
 
-        .card {
+        .grid-item {
             background-color: #2C2C2C;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
         }
 
-        .card:hover {
+        .grid-item:hover {
             transform: translateY(-5px);
         }
 
-        .card h3 {
+        .grid-item h3 {
             font-size: 20px;
-            margin-bottom: 10px;
-            color: #26A69A;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
         }
 
-        .card p {
+        .grid-item p {
             font-size: 14px;
             color: #B0BEC5;
         }
 
         footer {
-            padding: 30px 20px;
             background-color: #1A1A1A;
+            padding: 30px 20px;
             text-align: center;
         }
 
         footer p {
             font-size: 14px;
-            color: #B0BEC5;
         }
 
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p, .cta-button {
+                font-size: 16px;
+            }
+
+            .why-choose h2 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo">Hellith AI</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#overview">Overview</a>
-        <a href="#services">Services</a>
-        <a href="#usps">USPs</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <header>
+        <div class="logo">Hellith AI</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#why-choose">Why Us?</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<section class="hero" id="home">
-    <h1>Building Meaningful AI. Protecting Your Data.</h1>
-    <p>Delivering privacy-first, modular AI solutions for businesses without compromising data security.</p>
-    <a href="#contact" class="cta-button">Connect with Us</a>
-</section>
+    <section class="hero" id="home">
+        <h1>Privacy-First AI Solutions</h1>
+        <p>Empowering businesses with self-hosted, modular AI systems without compromising data privacy.</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </section>
 
-<section class="section" id="overview">
-    <h2>Overview</h2>
-    <p>Empowering organizations to harness AI effectively while maintaining data control and security.</p>
-</section>
+    <section class="why-choose" id="why-choose">
+        <h2>Why Choose Hellith AI?</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h3>Self-Hosted AI Systems</h3>
+                <p>Deploy AI tools within your infrastructure to maintain complete data control.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Transparency-Focused AI</h3>
+                <p>Explainable AI models that prioritize clarity, providing actionable insights.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Modular Architecture</h3>
+                <p>Customizable AI solutions tailored to specific business needs with scalability.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Adaptable Systems</h3>
+                <p>AI that evolves with your business, continuously delivering value.</p>
+            </div>
+            <div class="grid-item">
+                <h3>Human-Centric Design</h3>
+                <p>Intuitive, user-focused interfaces for enhanced usability and efficiency.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="grid-container">
-        <div class="card">
-            <h3>Self-Hosted AI Systems</h3>
-            <p>Deploy AI systems within your infrastructure for complete data control.</p>
-        </div>
-        <div class="card">
-            <h3>Custom AI Solutions</h3>
-            <p>Targeted AI products for workflow automation and predictive analytics.</p>
-        </div>
-        <div class="card">
-            <h3>Transparent AI Models</h3>
-            <p>Explainable AI systems offering actionable insights and clarity.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="usps">
-    <h2>Why Choose Us?</h2>
-    <div class="grid-container">
-        <div class="card">
-            <h3>Privacy-First Approach</h3>
-            <p>Data remains within your servers, ensuring confidentiality.</p>
-        </div>
-        <div class="card">
-            <h3>Scalable & Modular</h3>
-            <p>Adaptable AI solutions to meet evolving business needs.</p>
-        </div>
-    </div>
-</section>
-
-<footer id="contact">
-    <p>&copy; 2025 Hellith AI | <a href="mailto:info@hellithai.com">info@hellithai.com</a></p>
-</footer>
+    <footer id="contact">
+        <p>&copy; 2025 Hellith AI | <a href="mailto:info@hellithai.com">info@hellithai.com</a></p>
+    </footer>
 
 </body>
 </html>
