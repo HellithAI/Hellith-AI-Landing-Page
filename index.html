@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellith AI - Privacy-First AI Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,187 +16,142 @@
             font-family: 'Inter', sans-serif;
             background-color: #0F0F0F;
             color: #EEEEEE;
+            line-height: 1.6;
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .header {
+        header {
+            width: 100%;
             padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #B21807;
+            background-color: #0F0F0F;
+            text-align: center;
         }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 28px;
+            font-size: 32px;
+            font-weight: 600;
             color: #26A69A;
         }
 
-        .nav-links a {
-            margin-left: 20px;
-            color: #EEEEEE;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #B21807;
-        }
-
         .hero {
-            padding: 100px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0F0F0F;
+            padding: 40px;
             text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
         }
 
         .hero h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 48px;
-            font-weight: 700;
+            margin-bottom: 20px;
             color: #26A69A;
         }
 
         .hero p {
             font-size: 18px;
-            margin-top: 20px;
+            margin-bottom: 30px;
         }
 
-        .cta-button {
-            margin-top: 30px;
-            padding: 15px 30px;
-            background-color: #B21807;
-            color: #EEEEEE;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
+        .hero .cta-button {
             background-color: #26A69A;
+            color: #0F0F0F;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 600;
         }
 
-        .services-section {
-            padding: 100px 0;
-            background-color: #1A1A1A;
-        }
-
-        .services-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
+        .services {
+            background-color: #0F0F0F;
+            padding: 60px 20px;
             text-align: center;
-            color: #26A69A;
         }
 
-        .service-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 50px;
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: #26A69A;
         }
 
         .service-card {
-            background-color: #0F0F0F;
+            background-color: #1A1A1A;
+            margin: 20px auto;
             padding: 30px;
-            border: 1px solid #B21807;
+            max-width: 300px;
             border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
         }
 
         .service-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: #26A69A;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .service-card p {
-            margin-top: 10px;
-            color: #EEEEEE;
-        }
-
-        .contact-section {
-            padding: 100px 0;
+        .cta-section {
+            background-color: #1A1A1A;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        .contact-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: #B21807;
-        }
-
-        .contact-section a {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 15px 30px;
+        .cta-section a {
             background-color: #26A69A;
+            padding: 12px 24px;
             color: #0F0F0F;
-            font-weight: 700;
-            text-decoration: none;
             border-radius: 5px;
+            font-weight: 600;
         }
 
-        .contact-section a:hover {
-            background-color: #B21807;
-            color: #EEEEEE;
+        footer {
+            background-color: #0F0F0F;
+            padding: 40px;
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo">Hellith AI</div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </header>
+    <header>
+        <div class="logo">Hellith AI</div>
+    </header>
 
-        <section class="hero" id="home">
-            <h1>Transforming AI with Privacy-First Solutions</h1>
-            <p>Empowering your business with cutting-edge AI, securely and ethically.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Privacy-First AI Solutions</h1>
+            <p>Building Meaningful AI. Protecting Your Data.</p>
+            <a href="#cta" class="cta-button">Learn More</a>
+        </div>
+    </section>
 
-        <section class="services-section" id="services">
-            <h2>Our Premium Services</h2>
-            <div class="service-cards">
-                <div class="service-card">
-                    <h3>AI-Powered Data Security</h3>
-                    <p>State-of-the-art AI systems designed to protect sensitive data and enhance data privacy.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Custom AI Integrations</h3>
-                    <p>Integrate AI seamlessly into your existing infrastructure with tailored solutions.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Advanced Analytics</h3>
-                    <p>Data-driven insights powered by AI to boost business growth and efficiency.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Coming Soon: AI for Healthcare</h3>
-                    <p>Revolutionizing healthcare management with AI-enabled data insights. Stay tuned.</p>
-                </div>
-            </div>
-        </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <h3>Self-Hosted AI Systems</h3>
+            <p>Modular AI tools designed for deployment within your infrastructure, ensuring data privacy and control.</p>
+        </div>
+        <div class="service-card">
+            <h3>AI-Integrated Solutions</h3>
+            <p>Custom AI products for workflow automation, document processing, and predictive analytics.</p>
+        </div>
+        <div class="service-card">
+            <h3>Transparency-Focused AI</h3>
+            <p>Explainable AI models providing actionable insights without the hype, focusing on real-world impact.</p>
+        </div>
+    </section>
 
-        <section class="contact-section" id="contact">
-            <h2>Connect with Us</h2>
-            <a href="https://www.linkedin.com/in/ishaan-bagul/" target="_blank">Connect on LinkedIn</a>
-        </section>
-    </div>
+    <section class="cta-section" id="cta">
+        <h2>Connect With Us</h2>
+        <p>Interested in collaborating or learning more? Connect with us directly via LinkedIn.</p>
+        <a href="https://www.linkedin.com/in/ishaanbagul" target="_blank">Connect on LinkedIn</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hellith AI. All rights reserved.</p>
+    </footer>
 </body>
 </html>
