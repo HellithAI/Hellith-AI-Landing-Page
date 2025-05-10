@@ -15,15 +15,14 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #121212; /* Dark Background */
-            color: #EAEAEA; /* Light text for contrast */
+            background-color: #121212;
+            color: #EAEAEA;
             line-height: 1.6;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         a {
@@ -37,11 +36,16 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #1A1A1A; /* Dark Header */
+            background-color: #1A1A1A;
             padding: 20px 0;
             z-index: 100;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #121212;
         }
 
         header .logo {
@@ -63,82 +67,11 @@
             font-size: 18px;
             font-weight: 500;
             text-transform: uppercase;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         header nav a:hover {
-            color: #26A69A; /* Accent color */
-        }
-
-        /* Section - Overview, Vision, Mission */
-        .section {
-            padding: 80px 20px;
-            text-align: center;
-            background-color: #1A1A1A;
-            margin: 40px 0;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #26A69A; /* Accent Color */
-        }
-
-        .section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #B0BEC5;
-        }
-
-        /* Services & USPs Centering */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 40px;
-            margin-top: 60px;
-            width: 100%;
-        }
-
-        .services-grid, .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            justify-items: center;
-            width: 80%;
-        }
-
-        .service-card, .usp-card {
-            background-color: #2C2C2C;
-            color: #EAEAEA;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .service-card:hover, .usp-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card h3, .usp-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-
-        .service-card p, .usp-card p {
-            font-size: 16px;
-            color: #B0BEC5;
+            color: #26A69A;
         }
 
         /* Hero Section */
@@ -151,6 +84,7 @@
             color: white;
             padding: 0 20px;
             text-align: center;
+            transition: opacity 1s ease-in-out;
         }
 
         .hero h1 {
@@ -172,11 +106,59 @@
             border-radius: 5px;
             font-size: 18px;
             font-weight: 500;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s ease;
         }
 
         .cta-button:hover {
             background-color: #00796B;
+            transform: translateY(-5px);
+        }
+
+        /* Core Services & USPs Centering */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .services-grid, .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            width: 80%;
+        }
+
+        .service-card, .usp-card {
+            background-color: #2C2C2C;
+            color: #EAEAEA;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .service-card:hover, .usp-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card h3, .usp-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        .service-card p, .usp-card p {
+            font-size: 16px;
+            color: #B0BEC5;
         }
 
         /* Footer Section */
@@ -185,6 +167,8 @@
             color: white;
             padding: 30px 20px;
             text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
         footer p {
@@ -200,44 +184,17 @@
             color: #00796B;
         }
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* Scroll Animations */
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
         }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header nav a {
-                font-size: 16px;
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
             }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .cta-button {
-                font-size: 16px;
-                padding: 12px 25px;
-            }
-
-            .section h2 {
-                font-size: 32px;
-            }
-
-            .section p {
-                font-size: 16px;
-            }
-
-            .service-card, .usp-card {
-                padding: 20px;
-            }
-
-            footer p {
-                font-size: 14px;
+            100% {
+                opacity: 1;
             }
         }
     </style>
@@ -257,7 +214,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero fade-in" id="home">
         <div>
             <h1>Building Meaningful AI. Protecting Your Data.</h1>
             <p>Hellith AI is a privacy-first AI company that focuses on delivering self-hosted, modular AI solutions to empower businesses without compromising data security.</p>
@@ -266,22 +223,15 @@
     </section>
 
     <!-- Overview Section -->
-    <section class="section" id="overview">
+    <section class="section fade-in" id="overview">
         <h2>Overview</h2>
         <p>Hellith AI is a stealth-mode AI product company focused on building self-hosted, modular AI systems that prioritize data privacy without sacrificing AI capabilities. We empower businesses to harness the power of AI while maintaining full control over their data and infrastructure.</p>
     </section>
 
-    <!-- Vision & Mission Section -->
-    <section class="section" id="vision-mission">
-        <h2>Vision & Mission</h2>
-        <p><strong>Vision:</strong> To redefine how AI integrates into organizations by developing intentional, privacy-first AI products that are adaptable, transparent, and impactful.</p>
-        <p><strong>Mission:</strong> To create AI tools that are respectful of user data, modular in design, and tailored to solve specific business problems without relying on external data storage or third-party servers.</p>
-    </section>
-
-    <!-- Core Services and USPs Section -->
+    <!-- Core Services & USPs Section -->
     <div class="container">
         <!-- Core Services -->
-        <section id="services">
+        <section id="services" class="fade-in">
             <h2>Our Core Services</h2>
             <div class="services-grid">
                 <div class="service-card">
@@ -300,7 +250,7 @@
         </section>
 
         <!-- Why Choose Hellith AI? -->
-        <section id="usps">
+        <section id="usps" class="fade-in">
             <h2>Why Choose Hellith AI?</h2>
             <div class="usp-grid">
                 <div class="usp-card">
@@ -328,7 +278,7 @@
     </div>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contact" class="fade-in">
         <p>&copy; 2025 Hellith AI | <a href="mailto:contact@hellithai.com">Contact Us</a></p>
     </footer>
 
