@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellith AI - Privacy-First AI Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,156 +21,139 @@
         }
 
         .container {
-            width: 90%;
-            margin: 0 auto;
-            padding: 50px 0;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         header {
+            background-color: #0F0F0F;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            border-bottom: 1px solid #26A69A;
         }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            color: #26A69A;
+            font-weight: 700;
         }
 
-        .nav-links a {
-            margin: 0 15px;
+        nav a {
+            margin-left: 1rem;
             color: #EEEEEE;
+            font-size: 1rem;
             text-decoration: none;
-            font-weight: 600;
         }
 
         .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            height: 80vh;
-            background-color: #0F0F0F;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .hero .text-transition {
-            font-size: 1.2rem;
-            color: #26A69A;
-            animation: changeText 10s infinite;
-        }
-
-        @keyframes changeText {
-            0% { content: "Building Meaningful AI"; }
-            25% { content: "Protecting Your Data"; }
-            50% { content: "Empowering Businesses"; }
-            75% { content: "Seamless Integration"; }
-            100% { content: "Scalable Solutions"; }
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .grid-item {
-            background-color: #1A1A1A;
-            padding: 30px;
-            border-radius: 12px;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .grid-item:hover {
-            background-color: #262626;
-            transform: translateY(-5px);
-        }
-
-        .cta-section {
-            background-color: #262626;
-            padding: 50px 0;
+            padding: 4rem 2rem;
             text-align: center;
         }
 
-        .cta-section a {
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .service-card {
+            background-color: #1A1A1A;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
             background-color: #26A69A;
+        }
+
+        .service-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #26A69A;
+        }
+
+        .cta {
+            background-color: #1A1A1A;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta a {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #26A69A;
+            padding: 1rem 2rem;
             color: #0F0F0F;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-weight: 600;
+            border-radius: 8px;
+            font-weight: 700;
             text-decoration: none;
         }
 
         footer {
-            padding: 30px 0;
+            background-color: #0F0F0F;
+            padding: 1rem;
             text-align: center;
+            border-top: 1px solid #26A69A;
         }
-
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">Hellith AI</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#cta">Connect</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Privacy-First AI Solutions</h1>
+        <p>Building Meaningful AI. Protecting Your Data.</p>
+    </section>
 
     <div class="container">
-        <header>
-            <div class="logo">Hellith AI</div>
-            <nav class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-
-        <section class="hero">
-            <h1>Privacy-First AI Solutions</h1>
-            <div class="text-transition">Building Meaningful AI</div>
-        </section>
-
-        <section class="grid" id="overview">
-            <div class="grid-item">
-                <h2>Overview</h2>
-                <p>Hellith AI is focused on developing self-hosted, modular AI systems that prioritize data privacy without compromising capabilities.</p>
-            </div>
-            <div class="grid-item">
-                <h2>Vision</h2>
-                <p>Redefining AI integration through privacy-first, adaptable, and impactful AI solutions.</p>
-            </div>
-            <div class="grid-item">
-                <h2>Mission</h2>
-                <p>Creating AI tools that respect data privacy, remain modular, and effectively solve business challenges.</p>
-            </div>
-        </section>
-
-        <section class="grid" id="services">
-            <div class="grid-item">
-                <h2>Self-Hosted AI Systems</h2>
-                <p>Deploy AI within your infrastructure with no external data transfer, ensuring data security and control.</p>
-            </div>
-            <div class="grid-item">
-                <h2>AI-Integrated Solutions</h2>
-                <p>AI-driven products for workflow automation, predictive analytics, and document processing.</p>
-            </div>
-            <div class="grid-item">
-                <h2>Transparency-Focused AI</h2>
-                <p>Explainable AI that delivers clear insights, emphasizing real-world impact and actionable data.</p>
-            </div>
-        </section>
-
-        <section class="cta-section" id="contact">
-            <h2>Connect with Us</h2>
-            <a href="https://www.linkedin.com/in/ishaanbagul">Connect on LinkedIn</a>
-        </section>
-
-        <footer>
-            &copy; 2025 Hellith AI. All rights reserved.
-        </footer>
+        <div class="service-card">
+            <h3>Self-Hosted AI Systems</h3>
+            <p>Modular AI tools designed for deployment within your infrastructure, ensuring full data control.</p>
+        </div>
+        <div class="service-card">
+            <h3>AI-Integrated Solutions</h3>
+            <p>Custom AI products that integrate seamlessly with your existing systems for workflow automation and data analysis.</p>
+        </div>
+        <div class="service-card">
+            <h3>Transparency-Focused AI</h3>
+            <p>Explainable AI models that provide clear, actionable insights with a focus on interpretability.</p>
+        </div>
     </div>
+
+    <div class="cta" id="cta">
+        <a href="https://www.linkedin.com/in/ishaanbagul">Connect with Us on LinkedIn</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Hellith AI. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
