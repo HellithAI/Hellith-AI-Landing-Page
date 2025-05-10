@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellith AI - Privacy-First AI Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         /* Basic Reset */
         * {
@@ -14,9 +14,9 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0F0F0F;
-            color: #EEEEEE;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #EAEAEA;
             line-height: 1.6;
         }
 
@@ -31,16 +31,17 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #1A237E;
+            background-color: #1E1E1E;
             padding: 20px 0;
             z-index: 100;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         header .logo {
             color: #fff;
             text-align: center;
             font-size: 32px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
         }
 
@@ -52,9 +53,14 @@
 
         header nav a {
             margin: 0 20px;
-            color: #fff;
+            color: #EAEAEA;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        header nav a:hover {
+            color: #26A69A;
         }
 
         /* Hero Section */
@@ -63,7 +69,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #1A237E;
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 0 20px;
@@ -72,6 +78,7 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
         }
 
         .hero p {
@@ -85,7 +92,7 @@
             color: white;
             border-radius: 5px;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 500;
             transition: background-color 0.3s;
         }
 
@@ -95,37 +102,40 @@
 
         /* Section - Overview, Vision, Mission */
         .section {
-            padding: 50px 20px;
+            padding: 80px 20px;
             text-align: center;
+            background-color: #1E1E1E;
         }
 
         .section h2 {
             font-size: 36px;
             margin-bottom: 30px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
+            color: #26A69A;
         }
 
         .section p {
             font-size: 18px;
             margin-bottom: 30px;
+            color: #B0BEC5;
         }
 
         /* Core Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            gap: 30px;
+            padding: 30px;
         }
 
         .service-card {
-            background-color: #1A237E;
-            color: #EEEEEE;
-            padding: 20px;
+            background-color: #2C2C2C;
+            color: #EAEAEA;
+            padding: 25px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
 
@@ -136,7 +146,7 @@
         .service-card h3 {
             font-size: 24px;
             margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
         }
 
@@ -147,29 +157,29 @@
 
         /* Unique Selling Propositions (USPs) */
         .usp-section {
-            background-color: #1A237E;
-            color: #EEEEEE;
-            padding: 50px 20px;
+            background-color: #333;
+            color: #EAEAEA;
+            padding: 80px 20px;
         }
 
         .usp-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 30px;
         }
 
         .usp-card {
             background-color: #26A69A;
             color: #FFFFFF;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer Section */
         footer {
-            background-color: #333;
+            background-color: #1E1E1E;
             color: white;
             padding: 30px 20px;
             text-align: center;
@@ -257,21 +267,15 @@
             </div>
             <div class="usp-card">
                 <h3>Human-Centric Design</h3>
-                <p>We prioritize intuitive, practical AI tools that feel natural and grounded in the real-world challenges businesses face.</p>
+                <p>Our solutions are intuitive, practical, and designed with end-users in mind to maximize efficiency and usability.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <h2>Contact Us</h2>
-        <p>If you're interested in collaborating or learning more, feel free to connect with us on LinkedIn.</p>
-        <a href="https://www.linkedin.com/in/ishaan-bagul/" class="cta-button">Connect on LinkedIn</a>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Hellith AI. All rights reserved.</p>
+        <p>Contact us on <a href="https://www.linkedin.com/in/yourprofile" target="_blank" style="color: #26A69A;">LinkedIn</a></p>
     </footer>
 
 </body>
