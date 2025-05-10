@@ -21,10 +21,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             flex-direction: column;
-            min-height: 100vh;
-            padding: 20px;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         a {
@@ -76,6 +77,8 @@
             text-align: center;
             background-color: #1A1A1A; /* Dark Background */
             margin: 40px 0;
+            width: 100%;
+            max-width: 1200px; /* Ensure it doesn't stretch too wide */
         }
 
         .section h2 {
@@ -100,6 +103,9 @@
             flex-direction: column;
             gap: 40px;
             margin-top: 60px;
+            width: 100%;
+            max-width: 1200px; /* Limit width */
+            padding: 0 20px;
         }
 
         .services-grid, .usp-grid {
@@ -108,7 +114,6 @@
             gap: 30px;
             justify-items: center; /* Center the grid items */
             width: 100%;
-            max-width: 1200px; /* Ensure max width for responsiveness */
         }
 
         .service-card, .usp-card {
@@ -149,6 +154,7 @@
             color: white;
             padding: 0 20px;
             text-align: center;
+            width: 100%;
         }
 
         .hero h1 {
@@ -183,6 +189,7 @@
             color: white;
             padding: 30px 20px;
             text-align: center;
+            width: 100%;
         }
 
         footer p {
@@ -286,7 +293,7 @@
 
     <!-- Footer -->
     <footer id="contact">
-        <p>&copy; 2025 Hellith AI | <a href="mailto:info@hellithai.com">info@hellithai.com</a></p>
+        <p>&copy; 2025 Hellith AI | <a href="mailto:contact@hellithai.com">Contact Us</a></p>
     </footer>
 
 </body>
